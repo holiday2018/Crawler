@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 """
 ** 文件名: crawlerregular.py
-** 创建人: SunWiping<email:sunweiping2012@163.com>
+** 创建人: SunWeiping<email:sunweiping2012@163.com>
 ** 日  期: 2015-07-21
 ** 描  述: 豆瓣电影的爬虫程序的正则表达式模块
 **
