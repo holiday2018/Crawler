@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 """
-** 文件名: crawler.py
+** 文件名: crawlerurl.py
 ** 创建人: SunWiping<email:sunweiping2012@163.com>
-** 日  期: 2015-07-22
+** 日  期: 2015-07-21
 ** 描  述: 豆瓣电影的爬虫程序的网页数据抓取模块
 **
 """
@@ -24,13 +24,9 @@ def get_movie_url():
     return movie_list
 
 
-def get_comment(url, id_num, name):
-    comment = urllib.urlopen(url).read()
-    comment_text = """
-    记忆中的小时代没有这么差啊，看在最后一集的份上给个3.5吧，毕竟最后那个苏打绿的《我好想你》的mv剪辑的不错
-    """
-    comment_list = [id_num, name, 1, 37, comment_text, "2015-07-22"]
-    return comment_list
+def get_comment_html(url):
+    comment_html = urllib.urlopen(url).read()
+    return comment_html
 
 
 

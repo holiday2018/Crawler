@@ -2,7 +2,7 @@
 """
 ** 文件名: crawlersql.py
 ** 创建人: SunWiping<email:sunweiping2012@163.com>
-** 日  期: 2015-07-20
+** 日  期: 2015-07-21
 ** 描  述: 豆瓣电影的爬虫程序中的MySQL操作模块
 **
 """
@@ -74,10 +74,10 @@ def create_table():
     CREATE TABLE `comment` (
 
     `id` int(11) NOT NULL,
-    `name` varchar(20) NOT NULL,
-    `starnum` int(1) DEFAULT NULL,
+    `name` varchar(40) NOT NULL,
+    `starnum` varchar(8) DEFAULT NULL,
     `usefulnum` int(11) DEFAULT NULL,
-    `comment` varchar(100) DEFAULT NULL,
+    `comment` varchar(200) DEFAULT NULL,
     `comment_date` varchar(11) NOT NULL,
     PRIMARY KEY (`id`),
     UNIQUE KEY `name` (`name`)
@@ -168,33 +168,3 @@ def show_tables():
     cursor.execute(sql)
     for row in cursor.fetchall():
         print(row)
-
-"""
-def main():
-    show_tables()
-
-    # 创建表
-    result = create_table()
-    print(result)
-    # 查询表
-    query_table('comment')
-    # 插入数据
-    print(insert_table())
-    print('插入数据后....')
-    query_table('comment')
-    # 更新数据
-    print(update_table())
-    print('更新数据后....')
-    query_table('comment')
-    #删除数据
-    # delete_data()
-    print('删除数据后....')
-    query_table('comment')
-    print_info()
-    #数据库中表情况
-    show_tables()
-
-
-if __name__ == '__main__':
-    main()
-"""
